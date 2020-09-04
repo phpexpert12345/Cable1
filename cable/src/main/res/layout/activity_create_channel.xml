@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="#0f1a31"
+    tools:context="cable.social.app.activity.CreateChannelActivity"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#020338"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="30dp"
+            android:id="@+id/back_create_cnl"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            android:tint="@color/white"
+            android:layout_centerVertical="true"
+            android:onClick="Close"
+            android:layout_margin="10dp"
+            android:layout_height="30dp"/>
+
+
+        <ImageView
+            android:layout_width="70dp"
+            android:src="@drawable/cable_logo"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:layout_height="70dp"/>
+
+    </RelativeLayout>
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:fillViewport="false"
+        android:background="#0f1a31"
+        android:nestedScrollingEnabled="true"
+
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="EDIT CHANNEL"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content"
+                />
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="70dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/ic_launcher"
+                android:id="@+id/channel_civ"
+                android:layout_height="70dp"/>
+
+            <EditText
+                android:id="@+id/channel_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:backgroundTint="#ddd"
+                android:drawableRight="@drawable/ic_edit"
+                android:hint="Channel Name"
+                android:singleLine="true"
+                android:textColorHint="@color/white" />
+            <EditText
+                android:layout_width="match_parent"
+                android:hint="User name"
+                android:id="@+id/user_name_et"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:singleLine="true"
+                android:backgroundTint="#ddd"
+                android:visibility="gone"
+                android:textColorHint="@color/white"
+                android:layout_marginTop="10dp"
+                android:drawableRight="@drawable/ic_edit"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:text="Channel type"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:layout_height="wrap_content"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/create_chanal"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="40dp"
+                android:id="@+id/save_btn"
+                android:layout_marginLeft="40dp"
+                android:textColor="@color/white"
+                android:background="@drawable/blue_btn_bg"
+                android:layout_marginBottom="@dimen/_30sdp"
+                android:text="Save &amp; Update" />
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

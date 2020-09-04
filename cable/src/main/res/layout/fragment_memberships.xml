@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/colorbg">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:visibility="visible"
+
+            android:background="#020338"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/backbutton"
+                android:onClick="Close"
+                android:layout_marginRight="10dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:src="@drawable/ic_arrow_back_black_24dp" />
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/backbutton"
+                android:text="Subscription"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/subscription_img"
+            android:fitsSystemWindows="true"
+            android:scaleType="fitXY"
+            />
+
+
+
+<!--        <TextView-->
+
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Plan"-->
+<!--            android:textSize="20dp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textColor="@color/white"/>-->
+
+<!--        <TextView-->
+<!--            android:padding="@dimen/_5sdp"-->
+<!--            android:layout_margin="15dp"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_toRightOf="@+id/backbutton"-->
+<!--            android:text="Exclusive Shows, Watch All Premium Content, Unlimited Entertainment and also Share with your friend to Watch movies together etc"-->
+<!--            android:textSize="12dp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textColor="@color/white"/>-->
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:padding="@dimen/_5sdp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/membership_recycle"-->
+<!--            />-->
+
+
+    </LinearLayout>
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:visibility="gone"-->
+<!--        android:id="@+id/planshow"-->
+<!--        card_view:cardBackgroundColor="@color/blue2"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="10dp"-->
+<!--        card_view:cardCornerRadius="10dp"-->
+<!--        card_view:cardElevation="5dp"-->
+<!--        >-->
+<!--        <RelativeLayout-->
+<!--            android:id="@+id/relativ2"-->
+<!--            android:layout_margin="8dp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+
+
+<!--            <TextView-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:id="@+id/preice"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:gravity="center|left"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="$800/Years"-->
+<!--                android:textSize="14dp"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="@color/white"/>-->
+
+<!--            <TextView-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Lorem Ipsum is simply  "-->
+<!--                android:textSize="10dp"-->
+<!--                android:layout_below="@+id/preice"/>-->
+
+<!--            <Button-->
+<!--                android:textAllCaps="false"-->
+<!--                android:layout_alignParentRight="true"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:layout_width="100dp"-->
+<!--                android:background="@drawable/blue_solid_round"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:id="@+id/payment"-->
+<!--                android:text="Continue"/>-->
+
+
+
+
+
+
+<!--        </RelativeLayout>-->
+<!--    </androidx.cardview.widget.CardView>-->
+
+</RelativeLayout>

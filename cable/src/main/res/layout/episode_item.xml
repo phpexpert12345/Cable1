@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_margin="3dp"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:adjustViewBounds="true"
+                android:src="@drawable/img"
+                android:id="@+id/imageView_cover"
+                android:scaleType="centerCrop"
+                android:layout_height="match_parent"/>
+
+            <LinearLayout
+                android:id="@+id/play_ll"
+                android:layout_width="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:background="@drawable/blue_solid_circle"
+                    android:src="@drawable/ic_play_icon"
+                    android:layout_centerInParent="true"
+                    android:layout_height="50dp"/>
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/tital_name"
+                    android:layout_width="wrap_content"
+                    android:text="It happend in calcutta"
+                    android:padding="@dimen/_2sdp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:padding="5dp"
+                        android:background="@drawable/blue_solid_circle"
+                        android:src="@drawable/ic_baseline_favorite_border_24"
+                        android:layout_height="30dp"/>
+                    <TextView
+                        android:id="@+id/total_like_e"
+                        android:layout_width="wrap_content"
+                        android:textSize="7dp"
+                        android:textColor="@color/white"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:src="@drawable/ic_calendar"
+                        android:layout_height="30dp"/>
+                    <TextView
+                        android:id="@+id/video_date_e"
+                        android:layout_width="wrap_content"
+                        android:textSize="7dp"
+                        android:textColor="@color/white"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:padding="5dp"
+                        android:background="@drawable/blue_solid_circle"
+                        android:src="@drawable/ic_eye"
+                        android:layout_height="30dp"/>
+                    <TextView
+                        android:id="@+id/total_views_e"
+                        android:layout_width="wrap_content"
+                        android:textSize="7dp"
+                        android:textColor="@color/white"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                android:paddingTop="10dp"-->
+<!--                android:id="@+id/menu_ll"-->
+<!--                android:layout_marginRight="10dp"-->
+<!--                android:visibility="gone"-->
+<!--                android:background="@drawable/blue_trans_round"-->
+<!--                android:layout_alignParentRight="true"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:layout_height="wrap_content">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:paddingTop="10dp"-->
+<!--                    android:paddingRight="10dp"-->
+<!--                    android:paddingLeft="10dp"-->
+
+<!--                    android:layout_height="wrap_content">-->
+<!--                    <ImageView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:src="@drawable/ic_add"-->
+<!--                        android:layout_height="wrap_content"/>-->
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:text="Add Episode"-->
+<!--                        android:textSize="10dp"-->
+<!--                        android:layout_marginLeft="10dp"-->
+<!--                        android:layout_height="wrap_content"/>-->
+<!--                </LinearLayout>-->
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:paddingTop="10dp"-->
+<!--                    android:paddingRight="10dp"-->
+<!--                    android:paddingLeft="10dp"-->
+
+<!--                    android:layout_height="wrap_content">-->
+<!--                    <ImageView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:src="@drawable/ic_small_edit"-->
+<!--                        android:layout_height="wrap_content"/>-->
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:text="Edit Video"-->
+<!--                        android:textSize="10dp"-->
+<!--                        android:layout_marginLeft="10dp"-->
+<!--                        android:layout_height="wrap_content"/>-->
+<!--                </LinearLayout>-->
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:paddingTop="10dp"-->
+<!--                    android:paddingRight="10dp"-->
+<!--                    android:paddingLeft="10dp"-->
+<!--                    android:paddingBottom="10dp"-->
+<!--                    android:layout_height="wrap_content">-->
+<!--                    <ImageView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:src="@drawable/ic_small_edit"-->
+<!--                        android:layout_height="wrap_content"/>-->
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:text="Edit Episode"-->
+<!--                        android:textSize="10dp"-->
+<!--                        android:layout_marginLeft="10dp"-->
+<!--                        android:layout_height="wrap_content"/>-->
+<!--                </LinearLayout>-->
+<!--            </LinearLayout>-->
+<!--            <ImageView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:id="@+id/dots_iv"-->
+<!--                android:src="@drawable/ic_three_dots"-->
+<!--                android:layout_alignParentRight="true"-->
+<!--                android:layout_height="wrap_content"/>-->
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>

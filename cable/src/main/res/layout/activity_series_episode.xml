@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0f1a31"
+    android:orientation="vertical"
+    tools:context=".activity.SeriesEpisodeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#020338"
+        android:layout_height="70dp">
+        <ImageView
+            android:layout_width="30dp"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            android:tint="@color/white"
+            android:id="@+id/back"
+            android:onClick="close"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:layout_height="30dp"/>
+        <ImageView
+            android:layout_width="70dp"
+            android:src="@drawable/cable_logo"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:layout_height="70dp"/>
+
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/series_panchayat_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/spinner_bg"
+        >
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/series_spnr"
+            android:layout_width="match_parent"
+            android:layout_height="50sp" />
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/episode_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:background="@drawable/spinner_bg"
+        >
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/episode_spnr"
+            android:layout_width="match_parent"
+            android:layout_height="50sp" />
+    </LinearLayout>
+
+
+
+
+
+
+
+</LinearLayout>

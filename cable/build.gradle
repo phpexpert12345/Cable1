@@ -1,0 +1,208 @@
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath "io.fabric.tools:gradle:$fabricToolsVersion"
+    }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'com.google.gms.google-services'
+
+repositories {
+    google()
+    jcenter()
+    maven {
+        url "https://github.com/QuickBlox/quickblox-android-sdk-releases/raw/master/"
+    }
+    maven { url 'https://maven.fabric.io/public' }
+    flatDir { dirs 'libs' }
+}
+
+
+
+
+
+def javaVersion = JavaVersion.VERSION_1_8
+
+
+android {
+    def versionQACode = 2
+    flavorDimensions dimensionDefault
+    compileSdkVersion android.compileSdkVersion
+    buildToolsVersion android.buildToolsVersion
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId 'cable.social.app'
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    productFlavors {
+        dev {
+            dimension dimensionDefault
+            buildConfigField('boolean', "IS_QA", "false")
+            buildConfigField("int", "VERSION_QA_CODE", versionQACode.toString())
+        }
+
+        qa {
+            dimension dimensionDefault
+            buildConfigField("boolean", "IS_QA", "true")
+            buildConfigField("int", "VERSION_QA_CODE", versionQACode.toString())
+        }
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+    productFlavors {
+    }
+
+    compileOptions {
+        sourceCompatibility javaVersion
+        targetCompatibility javaVersion
+    }
+
+
+}
+
+dependencies {
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.firebase:firebase-messaging:17.3.4'
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation project(':bottomnavbar')
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.1.0-beta01'
+    implementation 'com.google.android.material:material:1.1.0-alpha07'
+    implementation 'androidx.vectordrawable:vectordrawable:1.1.0-beta02'
+    implementation 'com.android.support:appcompat-v7:29.0.0'
+    implementation 'com.android.support:support-v4:29.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    //Retrofit library used for Network Call
+    implementation 'com.squareup.retrofit2:retrofit:2.6.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.2'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.2.2'
+    //LifeCycle extension
+    implementation 'android.arch.lifecycle:extensions:1.1.1'
+    kapt "android.arch.lifecycle:compiler:1.1.1"
+    //Picasso for image uploading
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
+    implementation 'com.karumi:dexter:6.0.0'
+    implementation 'androidx.core:core-ktx:+'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'com.github.Shashank02051997:FancyGifDialog-Android:1.2'
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.0.2'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    // Circal image view
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'com.rom4ek:arcnavigationview:1.0.3'
+    implementation 'com.github.florent37:shapeofview:1.4.7'
+    implementation 'com.aswin:CustomArc:1.0.2'
+    implementation 'com.github.zcweng:switch-button:0.0.3@aar'
+    implementation 'com.android.support:design:29.0.0'
+    implementation 'com.android.support:support-v4:29.0.0'
+    implementation 'com.github.ome450901:SimpleRatingBar:1.4.3'
+    implementation 'com.github.smarteist:autoimageslider:1.3.7-appcompat'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    implementation 'pub.devrel:easypermissions:0.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.android.volley:volley:1.1.1'
+    implementation 'com.chauthai.swipereveallayout:swipe-reveal-layout:1.4.1'
+    implementation 'com.razorpay:checkout:1.5.12'
+//    implementation 'com.google.android.exoplayer:exoplayer:r2.4.0'
+//    implementation 'com.google.android.exoplayer:exoplayer-core:r2.4.0'
+//    implementation 'com.google.android.exoplayer:exoplayer-dash:r2.4.0'
+//    implementation 'com.google.android.exoplayer:exoplayer-hls:r2.4.0'
+//    implementation 'com.google.android.exoplayer:exoplayer-smoothstreaming:r2.4.0'
+//    implementation 'com.google.android.exoplayer:exoplayer-ui:r2.4.0'
+    implementation 'com.github.f0ris.sweetalert:library:1.5.6'
+    implementation 'gun0912.ted:tedpermission:1.0.0'
+    // Shimmer
+    implementation 'com.facebook.shimmer:shimmer:0.1.0@aar'
+    implementation 'androidx.viewpager2:viewpager2:1.0.0-beta02'
+    implementation 'com.opentok.android:opentok-android-sdk:2.17.0'
+    implementation 'pub.devrel:easypermissions:0.4.0'
+    implementation 'com.android.volley:volley:1.1.0'
+    implementation('io.socket:socket.io-client:0.8.3')
+            { exclude group: 'org.json', module: 'json' }
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.facebook.fresco:fresco:1.9.0'
+    implementation 'com.github.jrvansuita:PickImage:+'
+
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.47'
+
+
+    implementation project(':video-record')
+    implementation project(':video-compressor')
+    implementation project(':video-effect')
+//    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.5'
+    implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.4@aar'
+    implementation 'com.jakewharton:butterknife:10.1.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+
+    implementation 'com.google.android.exoplayer:exoplayer:2.7.2'
+
+
+    implementation "com.quickblox:quickblox-android-sdk-videochat-webrtc:$qbSdkVersion"
+    implementation "com.quickblox:quickblox-android-sdk-messages:$qbSdkVersion"
+
+    implementation "com.google.firebase:firebase-core:$firebaseCoreVersion"
+    implementation "com.navercorp.pulltorefresh:library:$pullToRefreshVersion@aar"
+    implementation("com.crashlytics.sdk.android:crashlytics:$crashlyticsVersion@aar") {
+        transitive = true
+    }
+    implementation "com.google.android.material:material:$materialVersion"
+    implementation "com.github.johnkil.android-robototextview:robototextview:$robotoTextViewVersion"
+    implementation "com.github.bumptech.glide:glide:$glideVersion"
+    implementation 'com.google.android.exoplayer:exoplayer:r2.4.0'
+    implementation 'com.google.android.exoplayer:exoplayer-core:r2.4.0'
+    implementation 'com.google.android.exoplayer:exoplayer-dash:r2.4.0'
+    implementation 'com.google.android.exoplayer:exoplayer-hls:r2.4.0'
+    implementation 'com.google.android.exoplayer:exoplayer-smoothstreaming:r2.4.0'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:r2.4.0'
+
+
+}
+repositories {
+    mavenCentral()
+}
+apply from: "../artifacts.gradle"
+apply plugin: 'com.google.gms.google-services'

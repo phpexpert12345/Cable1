@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:background="#1c1c6c"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/btm_sht_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:text="Upload Episode"
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#1c1c6c"
+        android:padding="16dp">
+
+        <Button
+            android:layout_width="200dp"
+            android:text="New Series"
+            android:textAllCaps="false"
+            android:id="@+id/dialog_yes"
+            android:background="@drawable/blue_btn_bg"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_height="50dp"/>
+
+
+        <Button
+            android:layout_width="200dp"
+            android:text="Continue"
+            android:id="@+id/dialog_no"
+            android:textAllCaps="false"
+            android:background="@drawable/blue_btn_bg"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_height="50dp"/>
+
+<!--        <Button-->
+<!--            android:id="@+id/buttonOk"-->
+<!--            android:layout_width="200dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_marginTop="15dp"-->
+<!--            android:background="@drawable/button_background"-->
+<!--            android:text="Ok"-->
+<!--            android:textColor="@color/colorPrimary" />-->
+
+
+
+        <LinearLayout
+            android:id="@+id/series_panchayat_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            android:background="@drawable/spinner_bg"
+            >
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/series_spnr"
+                android:layout_width="match_parent"
+                android:layout_height="50sp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

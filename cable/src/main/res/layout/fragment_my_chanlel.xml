@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:background="#0B1A33"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#020338"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="70dp">
+        <ImageView
+            android:layout_width="30dp"
+            android:id="@+id/back_create_cnl"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            android:tint="@color/white"
+            android:onClick="Close"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:layout_height="30dp"/>
+
+
+        <ImageView
+            android:layout_width="70dp"
+            android:src="@drawable/cable_logo"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:layout_height="70dp"/>
+
+    </RelativeLayout>
+
+
+
+    <TextView
+        android:id="@+id/my_chanel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MY Channel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:layout_marginTop="@dimen/_150sdp"
+        app:layout_constraintTop_toTopOf="parent"
+
+
+        />
+
+
+
+    <ImageView
+        android:id="@+id/channel_icon"
+        android:layout_width="120dp"
+        android:src="@drawable/ic_profile"
+        android:layout_centerInParent="true"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="120dp"/>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:paddingHorizontal="40dp"
+        android:id="@+id/edit_ch"
+        android:onClick="EditChannel"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/channel_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/blue_btn_bg"
+        android:text="Edit Channel" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

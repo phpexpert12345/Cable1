@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+
+
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       android:layout_centerVertical="true" >
+
+
+    </VideoView>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_stop_screenshare"
+        android:tint="#fff"
+        android:id="@+id/stop_screen_share"
+        android:layout_margin="30dp"
+        android:contentDescription="@string/close_sharing" />
+
+</RelativeLayout>

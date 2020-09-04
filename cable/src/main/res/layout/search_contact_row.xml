@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="65dp">
+
+    <RelativeLayout
+        android:background="#0b1933"
+        android:id="@+id/relativ"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <de.hdodenhof.circleimageview.CircleImageView
+            card_view:civ_border_width="2dp"
+            card_view:civ_border_color="@color/white"
+            android:layout_margin="3dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#FFFfFF"
+            android:src="@drawable/voo"
+            android:id="@+id/profile_image"/>
+
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_toRightOf="@+id/profile_image"
+        android:layout_toLeftOf="@+id/call"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/contact_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Movies Time"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/contact_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="9646874312"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:layout_toRightOf="@+id/profile_image"
+            android:layout_toLeftOf="@+id/call"/>
+
+    </LinearLayout>
+
+
+
+    <ImageView
+        android:layout_centerVertical="true"
+        android:id="@+id/camra"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:src="@drawable/camera_select" />
+  <ImageView
+      android:layout_centerVertical="true"
+      android:layout_toLeftOf="@+id/camra"
+        android:id="@+id/call"
+        android:layout_marginRight="10dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:src="@drawable/icons_call"
+        />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_margin="10dp"
+        android:layout_below="@+id/relativ"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimary">
+
+    </View>
+
+
+
+</RelativeLayout>

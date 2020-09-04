@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="#0f1a31"
+    tools:context=".activity.CreateMovieActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#020338"
+        android:layout_height="70dp">
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="30dp"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            android:layout_centerVertical="true"
+            android:tint="@color/white"
+            android:layout_margin="10dp"
+            android:layout_height="30dp"/>
+        <ImageView
+            android:layout_width="70dp"
+            android:src="@drawable/cable_logo"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:layout_height="70dp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Upload Episode "
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:textColor="@color/white"
+        android:layout_marginLeft="10dp"
+        android:layout_height="wrap_content"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/cover_ll"
+                android:layout_width="match_parent"
+                android:background="#020338"
+                android:layout_marginTop="20dp"
+                android:layout_height="@dimen/_150sdp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/upload_cover_ll"
+
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/upload_cover"
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/ic_upload_cover"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Upload Cover"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="#020338"
+                android:layout_marginTop="20dp"
+                android:layout_height="@dimen/_150sdp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/upload_photo_ll"
+                    android:layout_centerInParent="true"
+
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/upload_photo"
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/ic_upload_cover"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Upload Photo"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="#020338"
+                android:layout_marginTop="20dp"
+                android:layout_height="@dimen/_150sdp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/upload_video_ll"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/upload_video"
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/ic_upload_video"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Upload Video"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/selected_video_ll"
+                    android:visibility="gone"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/ic_right_tick"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Video Selected"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:hint="Series Name"
+                android:layout_marginTop="10dp"
+                android:id="@+id/series_name_et"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:singleLine="true"
+                android:backgroundTint="#ddd"
+                android:drawableRight="@drawable/ic_edit"
+                android:layout_height="wrap_content"/>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:hint="Season Title"
+                android:layout_marginTop="10dp"
+                android:id="@+id/title_et"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:singleLine="true"
+                android:backgroundTint="#ddd"
+                android:drawableRight="@drawable/ic_edit"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:hint="Season Desicription"
+                android:textAllCaps="false"
+                android:layout_marginTop="10dp"
+                android:id="@+id/desc_et"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:singleLine="true"
+                android:backgroundTint="#ddd"
+                android:drawableRight="@drawable/ic_edit"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:hint="Season Number"
+                android:layout_marginTop="10dp"
+                android:id="@+id/season_number"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:singleLine="true"
+                android:inputType="number"
+                android:backgroundTint="#ddd"
+                android:drawableRight="@drawable/ic_edit"
+                android:layout_height="wrap_content"/>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:hint="Episode Title "
+                android:textAllCaps="false"
+                android:layout_marginTop="10dp"
+                android:id="@+id/episod_title_et"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:singleLine="true"
+                android:backgroundTint="#ddd"
+                android:drawableRight="@drawable/ic_edit"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:hint="Air Date"
+                android:layout_marginTop="10dp"
+                android:id="@+id/date_et"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:singleLine="true"
+                android:focusable="false"
+                android:backgroundTint="#ddd"
+                android:drawableRight="@drawable/ic_calendar"
+                android:layout_height="wrap_content"/>
+
+
+            <LinearLayout
+                android:id="@+id/block_panchayat_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/spinner_bg"
+                >
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/cat_ep_spnr"
+                    android:layout_width="match_parent"
+                    android:layout_height="40sp" />
+            </LinearLayout>
+
+
+            <Button
+                android:layout_width="200dp"
+                android:text="Publish"
+                android:layout_gravity="center"
+                android:id="@+id/submit_btn"
+                android:background="@drawable/blue_btn_bg"
+                android:layout_centerInParent="true"
+                android:layout_margin="20dp"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

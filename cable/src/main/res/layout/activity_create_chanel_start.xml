@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorlogin"
+    android:fillViewport="true"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="172dp"
+            android:layout_alignParentRight="true"
+            android:layout_height="149dp"
+            app:srcCompat="@drawable/login_bg" />
+
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="150dp"
+            android:layout_height="137dp"
+            android:layout_marginTop="52dp"
+            app:srcCompat="@drawable/logo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@+id/logo"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_height="wrap_content">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_crt_channel"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/signup_camera" />
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome Ayush Gupta"
+                android:textSize="@dimen/_24sdp"
+                android:textColor="@color/white"
+                android:layout_gravity="center_horizontal"
+                />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/_10sdp"
+                >
+                <ImageView
+                    android:layout_width="240dp"
+                    android:layout_height="288dp"
+                    android:adjustViewBounds="true"
+                    android:layout_centerHorizontal="true"
+                    app:srcCompat="@drawable/group_7625"/>
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/create_chanel_start"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/blue_btn_bg"
+                android:gravity="center"
+                android:onClick="CreateChannel"
+                android:text="@string/create_your_channel"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:layout_margin="10sp"
+                />
+
+
+            <Button
+                android:id="@+id/watch_it_start"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/red_btn_bg"
+                android:gravity="center"
+                android:text="@string/watch_it"
+                android:textAllCaps="false"
+                android:layout_margin="10sp"
+                android:textStyle="bold"
+                android:onClick="Watchit"
+                />
+
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="193dp"
+                    android:layout_height="165dp"
+                    android:adjustViewBounds="true"
+                    android:layout_alignParentBottom="true"
+                    app:srcCompat="@drawable/login"/>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

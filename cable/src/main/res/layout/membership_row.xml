@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView
+        card_view:cardBackgroundColor="@color/blue2"
+        android:layout_width="match_parent"
+        android:id="@+id/cardview"
+        android:layout_margin="5dp"
+
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="10dp"
+        card_view:cardElevation="5dp"
+        >
+        <RelativeLayout
+            android:id="@+id/relativ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/r_button"/>
+            <TextView
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/white"
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$ 400"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                />
+
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/r_button"
+                android:id="@+id/tital_name"
+                android:layout_marginLeft="10dp"
+                android:gravity="center|left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3 Month Memberships"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+
+
+            <TextView
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/r_button"
+                android:layout_toLeftOf="@+id/price"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/white"
+                android:id="@+id/discraption"
+                android:maxLines="4"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="It should be display like for 30 Days I 2 Videos Played Number of video play and Number of days come from API which is already shared with you guys "
+                android:textSize="10dp"
+
+                android:layout_below="@+id/tital_name"/>
+
+
+
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

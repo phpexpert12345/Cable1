@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:layout_width="match_parent"
+		android:background="@android:color/transparent"
+		android:layout_height="wrap_content">
+
+	<RelativeLayout
+
+			android:id="@+id/roolll"
+			android:background="@drawable/dialod_selectorround"
+			android:layout_width="0dp"
+			android:layout_marginStart="@dimen/_20sdp"
+			android:layout_marginEnd="@dimen/_20sdp"
+			android:padding="@dimen/_10sdp"
+			android:layout_height="wrap_content"
+			app:layout_constraintTop_toTopOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			android:layout_marginTop="32dp"
+			app:layout_constraintEnd_toEndOf="parent">
+
+
+		<LinearLayout
+				android:padding="10dp"
+				android:id="@+id/dialogBox"
+				android:layout_width="match_parent"
+				android:gravity="center"
+				android:layout_height="wrap_content"
+				android:layout_centerInParent="true"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				android:orientation="vertical">
+
+			<TextView
+					android:visibility="visible"
+					android:id="@+id/hostesstxt"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="@string/dear_camila_rodriguez"
+					android:textSize="@dimen/_14sdp"
+					android:gravity="center|top"
+					android:layout_marginBottom="@dimen/_15sdp"
+					android:textColor="@color/colorbg"/>
+
+			<TextView
+				android:textColor="@color/colorPrimary"
+					android:visibility="visible"
+					android:id="@+id/txt_content"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:textSize="@dimen/_16sdp"
+					android:layout_marginTop="10dp"
+					android:layout_marginBottom="10dp"
+					android:text="@string/john_smith_is_asking_for_a_private_video_chat"/>
+
+
+			<LinearLayout
+					android:layout_marginBottom="15dp"
+					android:gravity="center|top"
+					android:orientation="horizontal"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content">
+
+
+				<Button
+						android:layout_gravity="center"
+						android:id="@+id/Accept"
+						android:layout_width="0dp"
+						android:layout_weight="0.5"
+						android:layout_height="wrap_content"
+						android:minHeight="30dp"
+						android:text="@string/accept"
+						android:gravity="center"
+						android:background="@drawable/hostessnewbtn"
+						android:textSize="@dimen/_12sdp"
+						android:textAllCaps="false"
+						android:textColor="@android:color/white"
+						/>
+				<Button
+						android:minHeight="30dp"
+
+						android:layout_marginLeft="@dimen/_15sdp"
+						android:id="@+id/reject"
+						android:layout_width="0dp"
+						android:layout_weight="0.5"
+						android:layout_height="wrap_content"
+						android:text="@string/decline"
+						android:gravity="center"
+						android:layout_gravity="center"
+						android:background="@drawable/hostessedittext_round_corner2"
+						android:textSize="@dimen/_12sdp"
+						android:textColor="@color/white"
+						android:textAllCaps="false"
+						/>
+
+			</LinearLayout>
+
+
+		</LinearLayout>
+
+
+
+	</RelativeLayout>
+	<ImageView
+			android:id="@+id/closeImg"
+			android:src="@drawable/close"
+			android:layout_width="@dimen/_20sdp"
+			android:layout_height="@dimen/_20sdp"
+			app:layout_constraintTop_toTopOf="@+id/roolll"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintBottom_toTopOf="@+id/roolll"
+		android:layout_marginEnd="16dp"
+			app:layout_constraintVertical_bias="0.615"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

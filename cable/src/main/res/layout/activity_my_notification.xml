@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#0f1a31"
+    android:layout_height="match_parent"
+    tools:context=".activity.MyNotificationActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#020338"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="30dp"
+            android:id="@+id/back_iv"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            android:layout_centerVertical="true"
+            android:tint="@color/white"
+            android:layout_margin="10dp"
+            android:layout_height="30dp"/>
+        <ImageView
+            android:layout_width="@dimen/_70sdp"
+            android:src="@drawable/cable_logo"
+            android:adjustViewBounds="true"
+            android:layout_centerInParent="true"
+            android:layout_height="70dp"/>
+
+    </RelativeLayout>
+<!--    <com.google.android.material.tabs.TabLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:id="@+id/tabLayout"-->
+<!--        app:tabMode="scrollable"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:layout_height="wrap_content"/>-->
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:id="@+id/noti_recycler"-->
+<!--        android:layout_height="wrap_content"/>-->
+
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        app:tabIndicatorHeight="0dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/blue_border"
+        app:tabBackground="@drawable/tab_background" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:id="@+id/viewPager"
+        android:layout_height="match_parent"/>
+
+
+
+
+
+</LinearLayout>

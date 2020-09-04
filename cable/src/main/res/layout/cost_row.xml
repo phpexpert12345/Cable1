@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:gravity="center">
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/voo"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="jesica"
+        android:layout_marginTop="5dp"
+        android:textSize="12dp"
+        android:textColor="@color/white"/>
+
+</LinearLayout>

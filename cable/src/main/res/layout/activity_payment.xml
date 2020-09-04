@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorbg"
+    tools:context="cable.social.app.activity.Payment">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/backbutton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            android:tint="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/backbutton"
+            android:gravity="center"
+            android:text="Payment"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+
+        <ImageView
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:src="@drawable/cable_logo"
+            android:layout_centerInParent="true"
+            />
+
+
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="10dp"
+        card_view:cardBackgroundColor="@color/white"
+        card_view:cardCornerRadius="10dp"
+        card_view:cardElevation="5dp"
+        card_view:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:id="@+id/relativ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <RadioButton
+                android:id="@+id/r_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPrimaryText_black"
+                android:buttonTint="@color/colorPrimaryText_black" />
+
+            <TextView
+                android:id="@+id/tital_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/r_button"
+                android:gravity="center|left"
+                android:text="3 Month Memberships"
+                android:textColor="@color/colorPrimaryText_black"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/discraption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tital_name"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="8dp"
+                android:layout_toLeftOf="@+id/price"
+                android:layout_toRightOf="@+id/r_button"
+                android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the "
+                android:textColor="@color/gray"
+
+                android:textSize="10dp" />
+
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tital_name"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="10dp"
+                android:text="$ 400"
+                android:textColor="@color/colorPrimaryText_black"
+                android:textSize="12dp" />
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/info_tital"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cardview"
+        android:layout_margin="10dp"
+        android:text="User Information" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/info_tital"
+        android:layout_marginTop="5dp"
+        card_view:cardBackgroundColor="@color/blue2"
+        card_view:cardCornerRadius="10dp"
+        card_view:cardElevation="5dp"
+        card_view:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:id="@+id/relativ1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <RadioButton
+                android:id="@+id/r_button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:backgroundTint="@color/white"
+                android:buttonTint="@color/white" />
+
+            <TextView
+                android:id="@+id/tital_discraption"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@+id/r_button1"
+                android:gravity="center|left"
+                android:text="You have selected basic plain .You are Loged in as
+jassi@123 if you would to use a Diffrent account for this subcription Logout now."
+                android:textColor="@color/white"
+                android:textSize="12dp" />
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/paymatoption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/info"
+        android:layout_margin="10dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:text="Payment Option" />
+
+
+    <RadioGroup
+
+        android:id="@+id/rdgroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/paymatoption">
+
+
+            <RadioButton
+
+                android:checked="true"
+                android:background="@drawable/radiobg"
+                android:id="@+id/r_Razorpay"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:gravity="center|left"
+                android:padding="@dimen/_15sdp"
+                android:text="Credit/Debit Card" />
+
+
+
+
+            <RadioButton
+                android:checked="false"
+                android:background="@drawable/radiobg"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:id="@+id/paypal"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:gravity="center|left"
+                android:padding="@dimen/_15sdp"
+                android:text="Paypal" />
+
+
+
+
+
+    </RadioGroup>
+    <androidx.cardview.widget.CardView
+        card_view:cardBackgroundColor="@color/blue2"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        card_view:cardCornerRadius="10dp"
+        card_view:cardElevation="5dp"
+        card_view:cardUseCompatPadding="true">
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:id="@+id/relativ2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/preice"
+                android:layout_marginLeft="10dp"
+                android:gravity="center|left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="$800/Years"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lorem Ipsum is simply  "
+                android:textSize="10dp"
+                android:layout_below="@+id/preice"/>
+
+            <Button
+                android:textAllCaps="false"
+                android:layout_alignParentRight="true"
+                android:layout_margin="10dp"
+                android:layout_width="100dp"
+                android:background="@drawable/blue_solid_round"
+                android:layout_height="40dp"
+                android:id="@+id/paymentt"
+                android:text="Proceed"/>
+
+
+
+
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

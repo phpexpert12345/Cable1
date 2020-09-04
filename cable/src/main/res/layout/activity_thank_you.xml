@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorbg"
+        tools:context="cable.social.app.activity.ThankYouActivity">
+
+        <include
+            android:id="@+id/toolBar"
+            layout="@layout/toolbar_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_5sdp"
+            android:tint="@color/white"
+            android:src="@drawable/recievedtick"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolBar"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center_horizontal"
+            android:text="THANK YOU!"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="376dp"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center_horizontal"
+            android:paddingStart="10dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="12dp"
+            android:text="YOUR REQUEST HAS BEEN RECIEVED"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.597"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text1"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt3"
+            android:layout_width="286dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="340dp"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center_horizontal"
+
+            android:lineSpacingExtra="@dimen/_5sdp"
+            android:text="Expect a call from us soon to help you block your slot"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt2"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center_horizontal"
+
+            android:text="Booking ID :"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.543"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt3"
+            app:layout_constraintVertical_bias="0.032" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/roboto_light"
+            android:gravity="center_horizontal"
+            android:paddingStart="10dp"
+
+            android:paddingEnd="20dp"
+            android:text="098476"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.183"
+            app:layout_constraintStart_toEndOf="@+id/title2"
+            app:layout_constraintTop_toBottomOf="@+id/txt4"
+            app:layout_constraintVertical_bias="0.026" />
+
+        <!--  <androidx.cardview.widget.CardView
+            android:id="@+id/cardView6"
+            android:layout_width="349dp"
+            android:layout_height="59_5sdp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="16dp"
+            android:elevation="_5sdp"
+            android:visibility="gone"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_5sdp"
+            app:cardMaxElevation="@dimen/dp_10"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/toolBar"
+            app:layout_constraintVertical_bias="0.342">
+
+            <LinearLayout
+
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:elevation="_5sdp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/toolBar"
+                app:layout_constraintVertical_bias="0.342">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/text2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:gravity="start"
+                        android:paddingStart="10dp"
+                        android:paddingTop="12dp"
+                        android:paddingEnd="2dp"
+                        android:paddingBottom="12dp"
+                        android:text="Your Booking ID is "
+                        android:textColor="@color/white"
+                        android:textSize="12dp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtbookingID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.54"
+                        android:background="@drawable/select_country_spinner"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:gravity="start"
+                        android:paddingStart="_5sdp"
+                        android:paddingTop="12dp"
+                        android:paddingEnd="_5sdp"
+                        android:paddingBottom="12dp"
+                        android:text="xxxxxxxxxxxxxxxxxxx"
+                        android:textColor="@color/white"
+                        android:textSize="13dp" />
+                </LinearLayout>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_10"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center_horizontal"
+                    android:paddingStart="_5sdp"
+                    android:paddingTop="22dp"
+                    android:paddingEnd="_5sdp"
+                    android:paddingBottom="1_5sdp"
+                    android:text="We will confirm the booking status shortly"
+                    android:textColor="@color/white"
+                    android:textSize="13dp" />
+
+                <Button
+                    android:id="@+id/btn_backtohome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_marginTop="116dp"
+                    android:layout_marginEnd="@dimen/dp_20"
+                    android:background="@color/white"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center"
+                    android:text="Back to Home"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16" />
+
+
+            </LinearLayout>
+            ̥
+        </androidx.cardview.widget.CardView>-->
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/title2"
+            android:layout_width="56dp"
+            android:layout_height="53dp"
+            android:src="@drawable/ic_group_ticketdetail"
+            app:layout_constraintBottom_toBottomOf="@+id/text5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.284"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt4"
+            app:layout_constraintVertical_bias="0.555" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt6"
+            android:layout_width="317dp"
+            android:layout_height="51dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:paddingStart="@dimen/_13sdp"
+            android:paddingEnd="@dimen/_15sdp"
+            android:text="MEANWHILE, TIME TO TELL YOUR BUDDIES WHAT YOU'VE BEEN UPTO"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text5"
+            app:layout_constraintVertical_bias="0.038" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtbookingID"
+            android:layout_width="198dp"
+            android:layout_height="41dp"
+            android:layout_marginStart="64dp"
+            android:layout_weight="0.54"
+            android:background="@drawable/select_country_spinner"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:paddingStart="@dimen/_5sdp"
+            android:paddingTop="12dp"
+            android:paddingEnd="@dimen/_5sdp"
+            android:paddingBottom="12dp"
+            android:text="LLP019L"
+            android:textColor="@color/colorPrimaryText_black"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.241"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView22"
+            app:layout_constraintVertical_bias="0.271" />
+
+        <ImageView
+            android:id="@+id/imageView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.585"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt6"
+            app:layout_constraintVertical_bias="0.037"
+            app:srcCompat="@drawable/socialmedia" />
+
+        <ImageView
+            android:id="@+id/imageView23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/txtbookingID"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.168"
+            app:layout_constraintStart_toEndOf="@+id/txtbookingID"
+            app:layout_constraintTop_toBottomOf="@+id/imageView22"
+            app:layout_constraintVertical_bias="0.906"
+            app:srcCompat="@drawable/copy" />
+
+        <TextView
+            android:id="@+id/textView44"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Referral code"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/txtbookingID"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.407"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView22"
+            app:layout_constraintVertical_bias="0.694" />
+
+        <Button
+            android:id="@+id/btn_backtohome"
+            android:layout_width="247dp"
+            android:layout_height="38dp"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:text="Back to Home"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimaryText_black"
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.457"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtbookingID"
+            app:layout_constraintVertical_bias="0.242" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#0f1a31"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/main_rl"
+        android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="60dp"
+            android:layout_margin="10dp"
+            android:id="@+id/user_civ"
+            android:src="@drawable/ic_change_profile"
+            android:layout_height="60dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_toRightOf="@+id/user_civ"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Sunil"
+                android:id="@+id/name_tv"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="5m ago"
+                android:textSize="12dp"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/accept"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_accept" />
+            <ImageView
+                android:id="@+id/reject"
+                android:layout_width="40dp"
+                android:src="@drawable/ic_reject"
+                android:layout_height="40dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ddd"
+        android:id="@+id/line_view"
+        android:layout_below="@id/main_rl"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/category_recycler"
+        android:background="@drawable/blue_border"
+        android:layout_margin="10dp"
+        android:layout_height="40dp"/>
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_marginRight="10dp"-->
+<!--        android:background="@drawable/light_sky_round"-->
+<!--        android:layout_marginLeft="10dp"-->
+<!--        android:layout_height="50dp">-->
+<!--        <EditText-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:background="#00DDDDDD"-->
+<!--            android:textSize="12dp"-->
+<!--            android:textColorHint="#000"-->
+<!--            android:layout_marginLeft="15dp"-->
+<!--            android:hint="Search for a movie,tv show, person...."-->
+<!--            android:layout_height="match_parent"/>-->
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:text="Search"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginRight="20dp"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textStyle="bold"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:layout_height="wrap_content"/>-->
+<!--    </RelativeLayout>-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/video_recycler"
+        android:layout_marginTop="10dp"
+        android:layout_height="match_parent"/>
+
+<TextView
+    android:id="@+id/no_data"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:text="@string/no_data"
+    android:gravity="center"
+    android:layout_gravity="center"
+    />
+
+
+</LinearLayout>

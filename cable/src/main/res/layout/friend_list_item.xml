@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools"
+    android:orientation="vertical"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView
+        card_view:cardBackgroundColor="#0b1933"
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="10dp"
+        card_view:cardElevation="2dp"
+        card_view:cardUseCompatPadding="true">
+        <RelativeLayout
+            android:id="@+id/rl_not_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/relativ"
+                android:layout_width="match_parent"
+                android:padding="5sp"
+                android:layout_height="wrap_content">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    card_view:civ_border_width="2dp"
+                    card_view:civ_border_color="@color/white"
+                    android:layout_margin="3dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="#FFFfFF"
+                    android:src="@drawable/voo"
+                    android:id="@+id/profile_image"/>
+
+
+                <TextView
+                    android:id="@+id/user_name"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/profile_image"
+                    android:layout_marginTop="10sp"
+                    android:text="Movies Time"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"/>
+                <TextView
+                    android:id="@+id/user_no"
+                    android:layout_marginStart="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_toEndOf="@+id/profile_image"
+                    android:layout_below="@+id/user_name"
+                    android:text="8076707236"
+                    android:textSize="8dp"
+                    android:textStyle="bold"
+                    android:textColor="#dedede"
+                    />
+
+<!--                <TextView-->
+<!--                    android:id="@+id/time"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:layout_marginRight="5dp"-->
+<!--                    android:layout_alignParentRight="true"-->
+<!--                    android:paddingLeft="10dp"-->
+<!--                    android:paddingRight="@dimen/_10sdp"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="2 mins ago"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="10dp"/>-->
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_call_btn"
+                    android:layout_toStartOf="@+id/video"
+                    android:layout_margin="5sp"
+                    />
+
+                <ImageView
+                    android:id="@+id/video"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_video_btn"
+                    android:layout_margin="5sp"
+                    />
+
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

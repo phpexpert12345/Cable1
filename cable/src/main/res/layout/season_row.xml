@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_120sdp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="20dp"
+    app:cardBackgroundColor="#0f1a31"
+    app:cardCornerRadius="5dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_5sdp"
+
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/profile_image_season"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80sdp"
+            android:background="@drawable/deva"/>
+        <TextView
+            android:id="@+id/tital_season"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/season"
+            android:layout_marginTop="5dp"
+            android:textSize="16dp"
+            android:textColor="@color/white"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/details"
+            android:id="@+id/decraption_season"
+            android:textSize="12dp"
+            android:textColor="@color/white"/>
+
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

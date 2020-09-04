@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.chauthai.swipereveallayout.SwipeRevealLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipelayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:dragEdge="right"
+    android:layout_margin="5dp"
+    app:mode="same_level">
+
+    <!--Swipe Layout-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:gravity="center"
+            android:background="@drawable/recycleview_background"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_edit_black_24dp"/>
+            <TextView
+                android:id="@+id/txtEdit1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="EDIT"
+                android:textSize="12dp"
+                android:textColor="#ffffff" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:background="@drawable/red_background_drawable"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_delete_black_24dp"/>
+            <TextView
+                android:id="@+id/txtEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Delete"
+                android:textSize="12dp"
+                android:textColor="#ffffff" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <!--Main Layout-->
+    <RelativeLayout
+        android:background="#233758"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="70dp"
+            android:layout_gravity="center"
+            android:src="@drawable/voo"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:id="@+id/image"
+            android:layout_height="70dp"/>
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/textView"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="10dp"
+            android:layout_toRightOf="@+id/image"
+            android:text="Lorem ipsum"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+<!--        <TextView-->
+
+<!--            android:id="@+id/like"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignTop="@+id/image"-->
+<!--            android:layout_alignEnd="@+id/textView"-->
+<!--            android:layout_alignBottom="@+id/textView"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:layout_marginEnd="20dp"-->
+<!--            android:layout_marginRight="-124dp"-->
+<!--            android:layout_marginBottom="-5dp"-->
+<!--            android:text="4.5K\nLikes"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="18sp" />-->
+
+
+        <TextView
+
+            android:id="@+id/like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toEndOf="@+id/textView"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:text="4.5K\nLikes"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+
+<!--        <ImageView-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:id="@+id/image"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentStart="true"-->
+<!--            android:layout_alignParentTop="true"-->
+<!--            android:src="@drawable/voo"-->
+<!--            />-->
+
+
+
+    </RelativeLayout>
+
+</com.chauthai.swipereveallayout.SwipeRevealLayout>
