@@ -71,7 +71,7 @@ public class MyAccountFragment extends Fragment implements View.OnClickListener,
 //    private ImageView  takecamra;
 
     private CircleImageView profile_civ;
-    private TextView fname_tv, lname_tv;
+    public static TextView fname_tv, lname_tv;
 
 
     File imagefile;

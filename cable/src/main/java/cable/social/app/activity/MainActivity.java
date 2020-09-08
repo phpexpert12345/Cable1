@@ -64,7 +64,7 @@ import retrofit2.Response;
 public class MainActivity extends BaseActivity {
     private static DrawerLayout mDrawerLayout;
     ImageView toggle, search_iv;
-    TextView toolbartxt, uname, textView;
+    public static TextView toolbartxt, uname, textView;
     CircleImageView profileImage;
     Toolbar toolbar;
     ImageView Notificationbar;

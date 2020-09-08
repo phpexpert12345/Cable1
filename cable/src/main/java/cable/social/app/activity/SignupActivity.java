@@ -216,7 +216,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void Sucess() {
-        Intent intent = new Intent(SignupActivity.this, CreateChanelStart.class);
+        Intent intent = new Intent(SignupActivity.this, LoginActivity.class);
         if(!ImagePath.isEmpty()) {
             intent.putExtra("path", ImagePath);
         }

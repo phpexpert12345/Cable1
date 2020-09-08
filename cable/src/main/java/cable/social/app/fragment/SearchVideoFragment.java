@@ -1,9 +1,11 @@
 package cable.social.app.fragment;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -41,12 +43,20 @@ public class SearchVideoFragment extends Fragment implements Category_interface,
     private ArrayList<CategorySubList.Datum> subCategorylist = new ArrayList<>();
 
     private int cat_id=-1,position;
+    View view ;
 
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.frag_video_search,container,false);
+
+         view =inflater.inflate(R.layout.frag_video_search,container,false);
+        if (view != null){
+            InputMethodManager imm = (InputMethodManager)
+                    getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        }
+        return view;
     }
 
     @Override
@@ -57,6 +67,11 @@ public class SearchVideoFragment extends Fragment implements Category_interface,
             position = getArguments().getInt("position");
             categoyLists= getArguments().getParcelableArrayList("cat_list");
 
+        }
+        if (view != null){
+            InputMethodManager imm = (InputMethodManager)
+                    getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
         }
 
         getViewId(view);

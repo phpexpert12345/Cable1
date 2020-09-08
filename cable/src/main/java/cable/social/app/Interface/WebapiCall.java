@@ -298,14 +298,14 @@ public class WebapiCall {
                 if (response.code() == 200) {
 
 
-                    CSPreferences.putString(context, "tooken", response.body().getToken());
-                    CSPreferences.putString(context, "auth_key", response.body().getUserInfo().getId().toString());
-                    CSPreferences.putString(context, "name", response.body().getUserInfo().getCustomerName());
-                    CSPreferences.putString(context, "last_name", response.body().getUserInfo().getCustomerLastName());
-                    CSPreferences.putString(context, "email", response.body().getUserInfo().getCustomerEmail());
-                    CSPreferences.putString(context, "ActivePlanId", response.body().getUserInfo().getActivePlanId());
-                    CSPreferences.putString(context, "imageprofile", String.valueOf(response.body().getUserInfo().getCustomerProfilePic()));
-                    CSPreferences.putString(context, "user_name", String.valueOf(response.body().getUserInfo().getCustomerUsername()));
+//                    CSPreferences.putString(context, "tooken", response.body().getToken());
+//                    CSPreferences.putString(context, "auth_key", response.body().getUserInfo().getId().toString());
+//                    CSPreferences.putString(context, "name", response.body().getUserInfo().getCustomerName());
+//                    CSPreferences.putString(context, "last_name", response.body().getUserInfo().getCustomerLastName());
+//                    CSPreferences.putString(context, "email", response.body().getUserInfo().getCustomerEmail());
+//                    CSPreferences.putString(context, "ActivePlanId", response.body().getUserInfo().getActivePlanId());
+//                    CSPreferences.putString(context, "imageprofile", String.valueOf(response.body().getUserInfo().getCustomerProfilePic()));
+//                    CSPreferences.putString(context, "user_name", String.valueOf(response.body().getUserInfo().getCustomerUsername()));
 
 
                     signUp_interface.Sucess();
@@ -532,6 +532,10 @@ public class WebapiCall {
 
                     if (response.body().getStatusCode() == 200) {
                         GlobalClass.showtost(context, "" + response.body().getMessage());
+                        Intent intent = new Intent(context,MainActivity.class);
+                        context.startActivity(intent);
+
+
 
                     } else if (response.code() == 401) {
                         tokenExpired(context);

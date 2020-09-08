@@ -1,6 +1,7 @@
 package cable.social.app.activity;
 
 import android.app.PendingIntent;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -44,6 +45,20 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
 
 
     private QBUser userForSave;
+
+
+    ProgressDialog pd;
+
+    public void dailogshow(Context context) {
+        pd = new ProgressDialog(context);
+        pd.setMessage("loading...");
+        pd.setCancelable(false);
+        pd.show();
+    }
+
+    public void dailoghide(Context context) {
+        pd.dismiss();
+    }
 
     public static void start(Context context) {
         Intent intent = new Intent(context, LoginActivity.class);
@@ -111,7 +126,9 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     @Override
     public void onClick(View v) {
         if (v == login) {
+            dailogshow(LoginActivity.this);
             if (Check_Data(v)) {
+
                 HashMap<String, String> hashMap = new HashMap<>();
                 hashMap.put("customer_username", edtemail.getText().toString());
                 hashMap.put("password", edtpass.getText().toString());
@@ -126,6 +143,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
 
 
                 } else {
+                    dailoghide(LoginActivity.this);
 
                     Toast.makeText(this, GlobalClass.nointernet, Toast.LENGTH_LONG).show();
                 }
@@ -148,6 +166,8 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                     @Override
                     public void onSuccess(QBUser result, Bundle params) {
                         Log.d(TAG, "SignUp Successful");
+                        dailoghide(LoginActivity.this);
+
                         saveUserData(newUser);
                         loginToChat(result);
                         WebapiCall webapiCall = new WebapiCall();
@@ -157,11 +177,15 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
 
                     @Override
                     public void onError(QBResponseException e) {
+
+
                         Log.d(TAG, "Error SignUp" + e.getMessage());
                         if (e.getHttpStatusCode() == Consts.ERR_LOGIN_ALREADY_TAKEN_HTTP_STATUS) {
+                            dailoghide(LoginActivity.this);
                             signInCreatedUser(newUser,hashMap);
                         } else {
-                            hideProgressDialog();
+                            dailoghide(LoginActivity.this);
+                          //  hideProgressDialog();
                             ToastUtils.longToast(R.string.sign_up_error);
                         }
                     }
@@ -200,7 +224,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == Consts.EXTRA_LOGIN_RESULT_CODE) {
-            hideProgressDialog();
+          //  hideProgressDialog();
             boolean isLoginSuccess = data.getBooleanExtra(Consts.EXTRA_LOGIN_RESULT, false);
             String errorMessage = data.getStringExtra(Consts.EXTRA_LOGIN_ERROR_MESSAGE);
             HashMap<String, String> hashMap = new HashMap<>();
@@ -209,9 +233,13 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
             hashMap.put("device_type", "Android");
             hashMap.put("fcm_token", refreshedToken);
             if (isLoginSuccess) {
+                dailoghide(LoginActivity.this);
+
                 saveUserData(userForSave);
                 signInCreatedUser(userForSave,hashMap);
             } else {
+                dailoghide(LoginActivity.this);
+
                 ToastUtils.longToast(getString(R.string.login_chat_login_error) + errorMessage);
                 edtemail.setText(userForSave.getLogin());
                 edtpass.setText(userForSave.getPassword());
@@ -230,6 +258,8 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
             @Override
             public void onSuccess(QBUser user, Bundle params) {
                 Log.d(TAG, "SignIn Successful");
+                dailoghide(LoginActivity.this);
+
                 sharedPrefsHelper.saveQbUser(userForSave);
                 updateUserOnServer(qbUser);
                 WebapiCall webapiCall = new WebapiCall();
@@ -239,7 +269,9 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
             @Override
             public void onError(QBResponseException responseException) {
                 Log.d(TAG, "Error SignIn" + responseException.getMessage());
-                hideProgressDialog();
+                dailoghide(LoginActivity.this);
+
+               // hideProgressDialog();
                 ToastUtils.longToast(R.string.sign_in_error);
             }
         });
@@ -250,14 +282,16 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         QBUsers.updateUser(user).performAsync(new QBEntityCallback<QBUser>() {
             @Override
             public void onSuccess(QBUser qbUser, Bundle bundle) {
-                hideProgressDialog();
+             //   hideProgressDialog();
+                dailoghide(LoginActivity.this);
                // OpponentsActivity.start(LoginActivity.this);
-                finish();
+              //  finish();
             }
 
             @Override
             public void onError(QBResponseException e) {
-                hideProgressDialog();
+             //   hideProgressDialog();
+                dailoghide(LoginActivity.this);
                 ToastUtils.longToast(R.string.update_user_error);
             }
         });

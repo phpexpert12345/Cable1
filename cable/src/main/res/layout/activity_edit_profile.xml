@@ -134,6 +134,8 @@
                 android:backgroundTint="#EFEDED"
                 android:drawableEnd="@drawable/ic_username_profile"
                 android:hint="UserName"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
                 android:singleLine="true"
                 android:textColor="@color/white"
                 android:textSize="13dp" />

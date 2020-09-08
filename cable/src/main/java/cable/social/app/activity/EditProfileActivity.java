@@ -35,6 +35,9 @@ import okhttp3.MediaType;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
 
+import static cable.social.app.activity.MainActivity.uname;
+import static cable.social.app.activity.MyAccountFragment.fname_tv;
+
 public class EditProfileActivity extends AppCompatActivity implements  IPickResult, EditPassword {
 
 //    EditText fname_et,lname_et,mobile_et,about_et,tag_et;
@@ -80,6 +83,9 @@ public class EditProfileActivity extends AppCompatActivity implements  IPickResu
                 RequestBody customer_id_rb = RequestBody.create(MediaType.parse("multipart/form-data"), CSPreferences.readString(EditProfileActivity.this, "auth_key"));
                 RequestBody fname_rb = RequestBody.create(MediaType.parse("multipart/form-data"), fname);
                 RequestBody username_rb = RequestBody.create(MediaType.parse("multipart/form-data"), user_name);
+                uname.setText(fname);
+                fname_tv.setText(fname);
+                CSPreferences.putString(getApplicationContext(), "name", String.valueOf(fname));
 
 
                 RequestBody imagerequestFile;
@@ -136,7 +142,7 @@ public class EditProfileActivity extends AppCompatActivity implements  IPickResu
         Password = findViewById(R.id.password_et);
 
         fname_et.setText(fname);
-        user_name_et.setText(user_name);
+        user_name_et.setHint(user_name);
         email_et.setHint(email);
 
         if(profileimg!=null&&!profileimg.equalsIgnoreCase("null")&&!profileimg.equalsIgnoreCase("")){
